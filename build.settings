@@ -1,0 +1,24 @@
+settings = {
+	orientation = {
+		default = 'portrait',
+		supported = {'portrait'}
+	},
+	iphone = {
+		xcassets = 'Images.xcassets',
+		plist = {
+			UILaunchStoryboardName = 'LaunchScreen',
+			UIApplicationExitsOnSuspend = false,
+			FacebookAppID = 'XXXXXXXXX',	-- Replace XXXXXXXXX with your Facebook App ID.
+			CFBundleURLTypes = {
+				{
+					CFBundleURLSchemes = {
+						'fbXXXXXXXXX',	-- Replace XXXXXXXXX with your Facebook App ID.
+					}
+				}
+			}
+		},
+	},
+	android = {
+        facebookAppId = 'XXXXXXXXXX',  -- Replace XXXXXXXXXX with your Facebook App ID.
+    },
+}
