@@ -21,4 +21,7 @@ settings = {
 	android = {
         facebookAppId = 'XXXXXXXXXX',  -- Replace XXXXXXXXXX with your Facebook App ID.
     },
+	plugins = {
+		['plugin.facebook'] = {publisherId = 'com.spiralcodestudio'}
+	}
 }
