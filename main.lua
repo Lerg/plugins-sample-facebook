@@ -3,7 +3,7 @@ display.setStatusBar(display.HiddenStatusBar)
 
 local json = require('json')
 local widget = require('widget')
-local facebook = require('plugin.facebook')
+local facebook = require('plugin.spiralcode.facebook')
 
 display.setDefault('background', 1)
 

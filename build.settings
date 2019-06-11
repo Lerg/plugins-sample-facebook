@@ -22,6 +22,6 @@ settings = {
         facebookAppId = 'XXXXXXXXXX',  -- Replace XXXXXXXXXX with your Facebook App ID.
     },
 	plugins = {
-		['plugin.facebook'] = {publisherId = 'com.spiralcodestudio'}
+		['plugin.spiralcode.facebook'] = {publisherId = 'com.spiralcodestudio'}
 	}
 }
