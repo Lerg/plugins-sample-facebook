@@ -15,7 +15,15 @@ settings = {
 						'fbXXXXXXXXX',	-- Replace XXXXXXXXX with your Facebook App ID.
 					}
 				}
-			}
+			},
+			LSApplicationQueriesSchemes =
+            {
+                'fb',
+                'fbapi',
+                'fbauth2',
+                'fb-messenger-api',
+                'fbshareextension'
+            },
 		},
 	},
 	android = {

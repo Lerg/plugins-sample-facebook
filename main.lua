@@ -7,16 +7,19 @@ local facebook = require('plugin.spiralcode.facebook')
 
 display.setDefault('background', 1)
 
+-- Print launch arguments, may show launch URL if any.
 if launch_args then
 	print('launch_args')
 	print(json.prettify(launch_args))
 end
 
+-- Push notifications may hold an URL too.
 Runtime:addEventListener('notification', function(event)
 	print('notification event')
 	print(json.prettify(event))
 end)
 
+-- "applicationOpen" type of system event may have an URL as well.
 Runtime:addEventListener('system', function(event)
 	print('system event')
 	print(json.prettify(event))
@@ -43,10 +46,12 @@ widget.newButton{
 	label = 'Deferred AppLink',
 	onRelease = function()
 		print('getDeferredAppLinkData')
+		-- You may call this function on app start or later, but after facebook.init().
 		facebook.getDeferredAppLinkData{
 			listener = function(event)
 				print(json.prettify(event))
 				if not event.isError then
+					-- You can redirect the user based on the value of event.url.
 					native.showAlert('Deferred AppLink', event.url, {'OK'})
 				end
 			end
